@@ -1,0 +1,23 @@
+<table class="table">
+    <tr>
+        <td>
+            <h3>Lista de Envios</h3>
+        </td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="envio in listaEnvios">
+        <td>{{envio.nro_rastreo}}</td>
+        <td>{{envio.fecha_envio}}</td>
+        <td>{{envio.paisOrigen.descripcion}}</td>
+        <td>{{envio.paisDestino.descripcion}}</td>
+        <td>{{envio.nombrePersonaOrigen}}</td>
+        <td>{{envio.nombrePersonaDestino}}</td>
+        <td ng-if="envio.estado === 'A'">Activo</td>
+        <td ng-if="envio.estado === 'I'">Inactivo</td>
+        <td>
+            <a class="btn btn-default" 
+                ui-sref="envio-view({id:envio.id})">Ver</a>
+        </td>
+    </tr>
+</table>
+<a ui-sref="envio-new" class="btn-primary btn-lg">Agregar Nuevo Envio</a>

@@ -1,0 +1,38 @@
+<table class="table">
+    <tr>
+        <td><h3>Detalle del Envio:  {{viewEnvios.id}}</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Nro. de Rastreo</td>
+        <td>{{viewEnvios.nro_rastreo}}</td>
+    </tr>
+    <tr>
+        <td>Fecha de Envio</td>
+        <td>{{viewEnvios.fecha_envio}}</td>
+    </tr>
+    <tr>
+        <td>Pais de Origen</td>
+        <td>{{viewEnvios.paisOrigen.descripcion}}</td>
+    </tr>
+    <tr>
+        <td>Pais de Destino</td>
+        <td>{{viewEnvios.paisDestino.descripcion}}</td>
+    </tr>
+    <tr>
+        <td>Emisor</td>
+        <td>{{viewEnvios.nombrePersonaOrigen}}</td>
+    </tr>
+    <tr>
+        <td>Receptor</td>
+        <td>{{viewEnvios.nombrePersonaDestino}}</td>
+    </tr>
+    <tr>
+        <td>Estado</td>
+        <td ng-if="viewEnvios.estado === 'A'">Activo</td>
+        <td ng-if="viewEnvios.estado === 'I'">Inactivo</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="envio-edit({id:viewEnvios.id})">Cambiar Estado</a>
+</div>

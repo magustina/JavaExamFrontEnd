@@ -1,0 +1,14 @@
+{
+  "name": "angularApp",
+  "version": "0.0.1",
+  "description": "App para Envios con AngularJS",
+  "main": "App.js",
+  "author": "UCSA",
+  "dependencies": {
+    "express": "latest",
+    "method-override": "*",
+    "morgan": "*",
+    "satellizer": "*",
+    "nconf": "*"
+  }
+}
